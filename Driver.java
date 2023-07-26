@@ -3,6 +3,9 @@ import java.util.Scanner;
 public class Driver {
     public static void main(String[] args) {
 
+
+        Footballer f1 = new Footballer("Eren" ,21,"Winger","s",100 ,10);
+
         System.out.println("Welcome to Football Simulator 23.4!");
         System.out.println("Please select game mode: ");
         System.out.println("1. Single player");
