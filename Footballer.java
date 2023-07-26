@@ -64,4 +64,17 @@ public class Footballer {
     public void setfSalary(double fSalary) {
         this.fSalary = fSalary;
     }
+
+    public static void footballerBio(Footballer footballer) {
+        System.out.println("\n***********");
+        System.out.println("Player's name : " + footballer.getfName());
+        System.out.println("Player's age : " + footballer.getfAge());
+        System.out.println("Player's position : " + footballer.getfPosition());
+        System.out.println("Player's tier : " + footballer.getfTier());
+        System.out.println("Player's transfer fee : " + footballer.getfFee());
+        System.out.println("Player's annual salary : " + footballer.getfSalary());
+        System.out.println("***********\n");
+    }
+
+
 }
