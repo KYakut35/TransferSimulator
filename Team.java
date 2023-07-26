@@ -44,6 +44,13 @@ public class Team {
     public void showTeamInfo(Team team) {
         System.out.println("Team Name: " + getTeamName());
         System.out.println("Team Rating: " +getTeamRating());
+        System.out.println("Team Average Age: " +getTeamAverageAge());
+        System.out.println("\nTeam's Footballers List");
+
+        for (int i=0;i<team.teamPlayers.size();i++) {
+            Footballer.footballerBio(team.teamPlayers.get(i));
+        }
+        System.out.println("");
     }
 
 
