@@ -123,9 +123,11 @@ public class Driver {
 
         while(true)
         {
-            Scanner scanner = new Scanner(System.in);
+            Scanner scannerInt = new Scanner(System.in);
+            Scanner scannerStr = new Scanner(System.in);
+
             int choice;
-            choice = scanner.nextInt();
+            choice = scannerInt.nextInt();
 
             switch(choice)
             {
@@ -139,7 +141,6 @@ public class Driver {
                     break;
                 case 3:
                     System.out.println("Hope to see you again soon");
-                    scanner.close();
                     System.exit(0);
             }
         }
