@@ -1,8 +1,17 @@
 import java.sql.SQLOutput;
+import java.util.ArrayList;
 import java.util.Scanner;
 public class Driver {
 
     public static void main(String[] args) {
+
+        ArrayList<Footballer> fbList = new ArrayList<>();
+        ArrayList<Footballer> bjkList = new ArrayList<>();
+
+        // TEAMS
+
+        Team fb = new Team("Fenerbahce",fbList,1000,100);
+        Team bjk = new Team("Besiktas",bjkList,1000,100);
 
         //  FB TURKS
 
