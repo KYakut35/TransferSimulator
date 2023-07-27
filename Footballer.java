@@ -2,15 +2,17 @@ public class Footballer {
 
     private String fName;
     private int fAge;
+    private String fNationality;
     private String fPosition;
     private String fTier;
     private double fFee;
     private double fSalary;
 
 
-    public Footballer(String fName, int fAge, String fPosition, String fTier, double fFee, double fSalary) {
+    public Footballer(String fName, int fAge, String fNationality , String fPosition, String fTier, double fFee, double fSalary) {
         this.fName = fName;
         this.fAge = fAge;
+        this.fNationality = fNationality;
         this.fPosition = fPosition;
         this.fTier = fTier;
         this.fFee = fFee;
@@ -19,6 +21,14 @@ public class Footballer {
 
     public String getfName() {
         return fName;
+    }
+
+    public String getfNationality() {
+        return fNationality;
+    }
+
+    public void setfNationality(String fNationality) {
+        this.fNationality = fNationality;
     }
 
     public void setfName(String fName) {

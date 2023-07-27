@@ -6,6 +6,39 @@ public class Team {
     private String teamRating;
     private double teamAverageAge;
     private ArrayList<Footballer> teamPlayers;
+    private double transferBudget;
+    private double weeklyBudget;
+
+    public Team(String teamName, ArrayList<Footballer> teamPlayers, double transferBudget, double weeklyBudget) {
+        this.teamName = teamName;
+        this.teamPlayers = teamPlayers;
+        this.transferBudget = transferBudget;
+        this.weeklyBudget = weeklyBudget;
+    }
+
+    public void setTeamAverageAge(double teamAverageAge) {
+        this.teamAverageAge = teamAverageAge;
+    }
+
+    public void setTeamPlayers(ArrayList<Footballer> teamPlayers) {
+        this.teamPlayers = teamPlayers;
+    }
+
+    public double getTransferBudget() {
+        return transferBudget;
+    }
+
+    public void setTransferBudget(double transferBudget) {
+        this.transferBudget = transferBudget;
+    }
+
+    public double getWeeklyBudget() {
+        return weeklyBudget;
+    }
+
+    public void setWeeklyBudget(double weeklyBudget) {
+        this.weeklyBudget = weeklyBudget;
+    }
 
     public String getTeamName() {
         return teamName;
@@ -27,14 +60,14 @@ public class Team {
         return teamAverageAge;
     }
 
-    public void setTeamAverageAge() {
+    public double setTeamAverageAge() {
         int ageSum=0;
         double average=0;
         for (int i=0;i<teamPlayers.size();i++) {
            ageSum += teamPlayers.get(i).getfAge();
         }
         average = ageSum/teamPlayers.size();
-        this.teamAverageAge = average;
+        return average;
     }
 
     public ArrayList<Footballer> getTeamPlayers() {
@@ -55,10 +88,7 @@ public class Team {
 
 
 
-    public Team(String teamName) {
-        this.teamName = teamName;
-        setTeamAverageAge();
-    }
+
 
 
 }
