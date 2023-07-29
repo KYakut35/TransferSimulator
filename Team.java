@@ -114,6 +114,7 @@ public class Team {
             }
 
         }
+        team.showTeamInfo(team);
 
     }
 

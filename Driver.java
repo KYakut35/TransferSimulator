@@ -192,7 +192,6 @@ public class Driver {
 
                     if (team1.getTeamName().equals("Besiktas")) {
                         team1.transferTurkishPlayer(bjkTurksList,team1);
-                        team1.showTeamInfo(team1);
                         team2.transferTurkishPlayer(fbTurksList,team2);
                     }
                     else if (team1.getTeamName().equals("Fenerbahce")) {
