@@ -86,5 +86,16 @@ public class Footballer {
         System.out.println("***********\n");
     }
 
-
+    @Override
+    public String toString() {
+        return "Footballer{" +
+                "fName='" + fName + '\'' +
+                ", fAge=" + fAge +
+                ", fNationality='" + fNationality + '\'' +
+                ", fPosition='" + fPosition + '\'' +
+                ", fTier='" + fTier + '\'' +
+                ", fFee=" + fFee +
+                ", fSalary=" + fSalary +
+                '}';
+    }
 }
