@@ -17,8 +17,8 @@ public class Driver {
 
         Footballer f1 = new Footballer("FERDI" ,23, "TURKISH","LB","S",0 ,0);
         Footballer f2 = new Footballer("CENGIZ" ,26,"TURKISH","RW","A",0 ,0);
-        Footballer f3 = new Footballer("MERT M" ,21,"TURKISH","RB","B",0 ,0);
-        Footballer f4 = new Footballer("ISMAIL" ,21,"TURKISH","CDM","B",0 ,0);
+        Footballer f3 = new Footballer("SALIH" ,25,"TURKISH","CDM","A",0 ,0);
+        Footballer f4 = new Footballer("ZEKI" ,26,"TURKISH","RB","B",0 ,0);
         Footballer f5 = new Footballer("IRFAN CAN" ,21,"TURKISH","GK","B",0 ,0);
         Footballer f6 = new Footballer("MHY" ,21,"TURKISH","CM","B",0 ,0);
         Footballer f7 = new Footballer("ICK" ,21,"TURKISH","CAM","B",0 ,0);
@@ -27,7 +27,7 @@ public class Driver {
 
         Footballer f8 = new Footballer("MERT G" ,21,"TURKISH","GK","A",0 ,0);
         Footballer f9 = new Footballer("CENK" ,21,"TURKISH","ST","A",0 ,0);
-        Footballer f10 = new Footballer("SALIH" ,21,"TURKISH","CM","A",0 ,0);
+        Footballer f10 = new Footballer("SALIH" ,21,"TURKISH","CM","B",0 ,0);
         Footballer f11 = new Footballer("ONUR" ,21,"TURKISH","RB","B",0 ,0);
         Footballer f12 = new Footballer("TALHA" ,21,"TURKISH","CB","B",0 ,0);
         Footballer f13 = new Footballer("UMUT" ,21,"TURKISH","LB","C",0 ,0);
@@ -37,43 +37,43 @@ public class Driver {
 
         Footballer f15 = new Footballer("TADIC" ,21,"SERBIAN","LW","S",100 ,10);
         Footballer f16 = new Footballer("DZEKO" ,21,"BOSNIAN","ST","S",100 ,10);
-        Footballer f17 = new Footballer("BECAO" ,21,"BRAZILIAN","CB","B",100 ,10);
-        Footballer f18 = new Footballer("KENT" ,21,"ENGLISH","LW","B",100 ,10);
+        Footballer f17 = new Footballer("TETE" ,21,"BRAZILIAN","RW","S",100 ,10);
+        Footballer f18 = new Footballer("TETE" ,21,"ENGLISH","LW","B",100 ,10);
 
         //  BJK PLAYERS
 
         Footballer f19 = new Footballer("ABOUBAKAR" ,21,"CAMEROONIAN","ST","S",100 ,10);
         Footballer f20 = new Footballer("GEDSON" ,21,"PORTUGUESE","CM","S",100 ,10);
-        Footballer f21 = new Footballer("ROSIER" ,21,"FRENCH","RB","A",100 ,10);
-        Footballer f22 = new Footballer("AMARTEY" ,21,"GHANAIAN","CB","B",100 ,10);
+        Footballer f21 = new Footballer("REBIC" ,21,"FRENCH","RB","A",100 ,10);
+        Footballer f22 = new Footballer("ROSIER" ,21,"FRENCH","RB","A",100 ,10);
 
         //  GK
 
-        Footballer f23 = new Footballer("Navas" ,36,"DOMINICAN","GK","S",5 ,5);
-        Footballer f24 = new Footballer("Leno" ,31,"GERMAN","GK","A",8 ,3);
-        Footballer f25 = new Footballer("Pena" ,21,"SPANISH","GK","B",100 ,10);
-        Footballer f26 = new Footballer("Mignolet" ,21,"BELGIAN","GK","B",100 ,10);
+        Footballer f23 = new Footballer("NAVAS" ,36,"DOMINICAN","GK","S",5 ,5);
+        Footballer f24 = new Footballer("LENO" ,31,"GERMAN","GK","A",8 ,3);
+        Footballer f25 = new Footballer("PENA" ,21,"SPANISH","GK","B",100 ,10);
+        Footballer f26 = new Footballer("MIGNOLET" ,21,"BELGIAN","GK","B",100 ,10);
 
         //  CB
 
-        Footballer f27 = new Footballer("Ramos" ,36,"SPANISH","CB","S",0 ,7);
-        Footballer f28 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f29 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f30 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
+        Footballer f27 = new Footballer("RAMOS" ,36,"SPANISH","CB","S",0 ,7);
+        Footballer f28 = new Footballer("SANCHEZ" ,21,"COLOMBIAN","CB","S",0 ,7);
+        Footballer f29 = new Footballer("MINA" ,21,"COLOMBIAN","CB","A",0 ,7);
+        Footballer f30 = new Footballer("HOLDING" ,21,"ENGLISH","CB","B",0 ,7);
 
         //  RB
 
-        Footballer f31 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f32 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f33 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f34 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
+        Footballer f31 = new Footballer("DODO" ,21,"BRAZILIAN","RB","S",0 ,7);
+        Footballer f32 = new Footballer("BUTA" ,21,"TURK","RB","A",0 ,7);
+        Footballer f33 = new Footballer("PEMBELE" ,21,"FRENCH","RB","B",0 ,7);
+        Footballer f34 = new Footballer("HADERGJONAJ" ,21,"DUTCH","RB","C",0 ,7);
 
         //  LB
 
-        Footballer f35 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f36 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f37 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f38 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
+        Footballer f35 = new Footballer("TAVARES" ,21,"PORTUGUESE","LB","S",0 ,7);
+        Footballer f36 = new Footballer("TSIMIKAS" ,21,"GREEK","LB","A",0 ,7);
+        Footballer f37 = new Footballer("SANUSI" ,21,"NIGERIAN","LB","B",0 ,7);
+        Footballer f38 = new Footballer("MELNJAK" ,21,"CROTIAN","LB","C",0 ,7);
 
         //  CDM
 
