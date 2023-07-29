@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Team {
 
@@ -8,6 +9,8 @@ public class Team {
     private ArrayList<Footballer> teamPlayers;
     private double transferBudget;
     private double weeklyBudget;
+
+    Scanner scanStr = new Scanner(System.in);
 
     public Team(String teamName, ArrayList<Footballer> teamPlayers, double transferBudget, double weeklyBudget) {
         this.teamName = teamName;
@@ -84,6 +87,28 @@ public class Team {
             Footballer.footballerBio(team.teamPlayers.get(i));
         }
         System.out.println("");
+    }
+
+    public Footballer searchPlayer(ArrayList<Footballer> openList) {
+        System.out.println("Type footballer name");
+        String name = scanStr.nextLine();
+        for (int i=0; i<openList.size();i++) {
+            if (name.equals(openList.get(i).getfName())) {
+                System.out.println("Player Found");
+                openList.get(i).toString();
+                return openList.get(i);
+            }
+        }
+        System.out.println("Player cant found");
+        return null;
+    }
+
+    public void transferPlayer(ArrayList<Footballer> openList , Team team) {
+        System.out.println("");
+
+        for (int i=0; i<openList.size();i++) {
+
+        }
     }
 
 
