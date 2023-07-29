@@ -89,26 +89,32 @@ public class Team {
         System.out.println("");
     }
 
-    public Footballer searchPlayer(ArrayList<Footballer> openList) {
-        System.out.println("Type footballer name");
-        String name = scanStr.nextLine();
-        for (int i=0; i<openList.size();i++) {
-            if (name.equals(openList.get(i).getfName())) {
-                System.out.println("Player Found");
-                openList.get(i).toString();
-                return openList.get(i);
-            }
-        }
-        System.out.println("Player cant found");
-        return null;
-    }
 
-    public void transferPlayer(ArrayList<Footballer> openList , Team team) {
+
+    public void transferTurkishPlayer(ArrayList<Footballer> openList , Team team) {
         System.out.println("");
 
         for (int i=0; i<openList.size();i++) {
+            openList.get(i).toString();
+            Footballer.footballerBio(openList.get(i));
 
         }
+
+        System.out.println("");
+        System.out.println("Select 3 players from this list");
+
+        for (int i=0; i<3;i++) {
+            System.out.println("Type player name: ");
+            String input = scanStr.nextLine();
+            for (int x=0;x<openList.size();x++) {
+                if (input.equals(openList.get(x).getfName())) {
+                    team.teamPlayers.add(openList.get(x));
+                    System.out.println(team.teamPlayers.size()+ " Player Selected");
+                }
+            }
+
+        }
+
     }
 
 

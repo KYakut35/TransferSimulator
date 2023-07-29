@@ -7,11 +7,14 @@ public class Driver {
 
         ArrayList<Footballer> fbList = new ArrayList<>();
         ArrayList<Footballer> bjkList = new ArrayList<>();
+        ArrayList<Team> teamList = new ArrayList<>();
 
         // TEAMS
 
         Team fb = new Team("Fenerbahce",fbList,1000,100);
         Team bjk = new Team("Besiktas",bjkList,1000,100);
+        teamList.add(bjk);
+        teamList.add(fb);
 
         //  FB TURKS
 
@@ -23,6 +26,14 @@ public class Driver {
         Footballer f6 = new Footballer("MHY" ,21,"TURKISH","CM","B",0 ,0);
         Footballer f7 = new Footballer("ICK" ,21,"TURKISH","CAM","B",0 ,0);
 
+        ArrayList<Footballer> fbTurksList = new ArrayList<>();
+        fbTurksList.add(f1);
+        fbTurksList.add(f2);
+        fbTurksList.add(f3);
+        fbTurksList.add(f4);
+        fbTurksList.add(f5);
+        fbTurksList.add(f6);
+        fbTurksList.add(f7);
         //  BJK TURKS
 
         Footballer f8 = new Footballer("MERT G" ,21,"TURKISH","GK","A",0 ,0);
@@ -33,6 +44,14 @@ public class Driver {
         Footballer f13 = new Footballer("UMUT" ,21,"TURKISH","LB","C",0 ,0);
         Footballer f14 = new Footballer("ERSIN" ,21,"TURKISH","GK","C",0 ,0);
 
+        ArrayList<Footballer> bjkTurksList = new ArrayList<>();
+        bjkTurksList.add(f8);
+        bjkTurksList.add(f9);
+        bjkTurksList.add(f10);
+        bjkTurksList.add(f11);
+        bjkTurksList.add(f12);
+        bjkTurksList.add(f13);
+        bjkTurksList.add(f14);
         //  FB PLAYERS
 
         Footballer f15 = new Footballer("TADIC" ,21,"SERBIAN","LW","S",100 ,10);
@@ -115,6 +134,8 @@ public class Driver {
         Footballer f61 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
         Footballer f62 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
 
+        System.out.println(bjkList.size());
+
         System.out.println("Welcome to Football Simulator 23.4!");
         System.out.println("Please select game mode: ");
         System.out.println("1. Single player");
@@ -137,7 +158,49 @@ public class Driver {
                     break;
 
                 case 2:
+                    Team team1 = null;
+                    Team team2 = null;
                     System.out.println("Multiplayer game is starting...");
+                    System.out.println("Player 1 Select Team ");
+                    teamSelection();
+
+                    int select1 = scannerInt.nextInt();
+                    if (select1 == 1) {
+                        System.out.println("BJK Selected");
+                        team1=bjk;
+                    } else if (select1 == 2) {
+                        System.out.println("FB Selected");
+                        team1=fb;
+                    }
+                    else {
+                        System.out.println("Wrong team");
+                    }
+
+                    System.out.println("Player 2 Select Team ");
+                    teamSelection();
+                    int select2 = scannerInt.nextInt();
+                    if (select2 == 1) {
+                        System.out.println("BJK Selected");
+                        team2=bjk;
+                    } else if (select2 == 2) {
+                        System.out.println("FB Selected");
+                        team2=fb;
+                    }
+                    else {
+                        System.out.println("Wrong team");
+                    }
+
+                    if (team1.getTeamName().equals("Besiktas")) {
+                        team1.transferTurkishPlayer(bjkTurksList,team1);
+                        team1.showTeamInfo(team1);
+                        team2.transferTurkishPlayer(fbTurksList,team2);
+                    }
+                    else if (team1.getTeamName().equals("Fenerbahce")) {
+                        team1.transferTurkishPlayer(fbTurksList,team1);
+                        team2.transferTurkishPlayer(bjkTurksList,team2);
+                    }
+
+
                     break;
                 case 3:
                     System.out.println("Hope to see you again soon");
@@ -145,4 +208,17 @@ public class Driver {
             }
         }
     }
+
+
+
+    public static void teamSelection(){
+        System.out.println("(1) BJK");
+        System.out.println("(2) FB");
+        System.out.println("\nType Number: ");
+    }
 }
+
+
+
+
+
