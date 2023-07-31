@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Team {
@@ -11,6 +12,7 @@ public class Team {
     private double weeklyBudget;
 
     Scanner scanStr = new Scanner(System.in);
+    Scanner scanInt = new Scanner(System.in);
 
     public Team(String teamName, ArrayList<Footballer> teamPlayers, double transferBudget, double weeklyBudget) {
         this.teamName = teamName;
@@ -116,6 +118,46 @@ public class Team {
         }
         team.showTeamInfo(team);
 
+    }
+
+    public void transferPlayerFromGivenList(ArrayList<Footballer> givenList , Team team) {
+        try {
+
+            System.out.println("");
+
+            for (int i = 0; i < givenList.size(); i++) {
+                givenList.get(i).toString();
+                Footballer.footballerBio(givenList.get(i));
+            }
+            System.out.println("");
+
+            System.out.println("How many players do you want to select from this player list ? (0-3)");
+            int input = scanInt.nextInt();
+            boolean flag = true;
+
+            while (flag) {
+                if (input < 0 || input > 3) {
+                    System.out.println("Invalid input(Must be between 0 and 3)");
+                    System.out.println("How many players do you want to select from this player list ? (0-3)");
+                    input = scanInt.nextInt();
+                } else {
+                    for (int i = 0; i < input; i++) {
+                        System.out.println("Type player name: ");
+                        String name = scanStr.nextLine();
+                        for (int x = 0; x < givenList.size(); x++) {
+                            if (name.equals(givenList.get(x).getfName())) {
+                                team.teamPlayers.add(givenList.get(x));
+                                System.out.println(team.teamPlayers.size() + " Player Selected");
+                            }
+                        }
+                    }
+                    team.showTeamInfo(team);
+                    flag = false;
+                }
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Give Proper Input");
+        }
     }
 
 
