@@ -1,5 +1,6 @@
 import java.sql.SQLOutput;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Driver {
 
@@ -56,8 +57,14 @@ public class Driver {
 
         Footballer f15 = new Footballer("TADIC" ,21,"SERBIAN","LW","S",100 ,10);
         Footballer f16 = new Footballer("DZEKO" ,21,"BOSNIAN","ST","S",100 ,10);
-        Footballer f17 = new Footballer("TETE" ,21,"BRAZILIAN","RW","S",100 ,10);
-        Footballer f18 = new Footballer("TETE" ,21,"ENGLISH","LW","B",100 ,10);
+        Footballer f17 = new Footballer("KENT" ,21,"ENGLISH","RW","S",100 ,10);
+        Footballer f18 = new Footballer("BECAO" ,21,"BRAZILIAN","LW","B",100 ,10);
+
+        ArrayList<Footballer> fbForeignPlayers = new ArrayList<>();
+        fbForeignPlayers.add(f15);
+        fbForeignPlayers.add(f16);
+        fbForeignPlayers.add(f17);
+        fbForeignPlayers.add(f18);
 
         //  BJK PLAYERS
 
@@ -65,6 +72,12 @@ public class Driver {
         Footballer f20 = new Footballer("GEDSON" ,21,"PORTUGUESE","CM","S",100 ,10);
         Footballer f21 = new Footballer("REBIC" ,21,"FRENCH","RB","A",100 ,10);
         Footballer f22 = new Footballer("ROSIER" ,21,"FRENCH","RB","A",100 ,10);
+
+        ArrayList<Footballer> bjkForeignPlayers = new ArrayList<>();
+        bjkForeignPlayers.add(f19);
+        bjkForeignPlayers.add(f20);
+        bjkForeignPlayers.add(f21);
+        bjkForeignPlayers.add(f22);
 
         //  GK
 
@@ -150,70 +163,87 @@ public class Driver {
         System.out.println("2. Multiplayer");
         System.out.println("3. Quit");
 
-        while(true)
-        {
-            Scanner scannerInt = new Scanner(System.in);
-            Scanner scannerStr = new Scanner(System.in);
 
-            int choice;
-            choice = scannerInt.nextInt();
+            while (true) {
+                Scanner scannerInt = new Scanner(System.in);
+                Scanner scannerStr = new Scanner(System.in);
 
-            switch(choice)
-            {
-                case 1:
-                    System.out.println("This game mode is currently unavailable. Please try again later.");
-                    System.out.println("Please select game mode: ");
-                    break;
 
-                case 2:
-                    Team team1 = null;
-                    Team team2 = null;
-                    System.out.println("Multiplayer game is starting...");
-                    System.out.println("Player 1 Select Team ");
-                    teamSelection();
+                try {
+                    int choice;
+                    choice = scannerInt.nextInt();
+                    switch (choice) {
+                        case 1:
+                            System.out.println("This game mode is currently unavailable. Please try again later.");
+                            System.out.println("Please select game mode: ");
+                            break;
 
-                    int select1 = scannerInt.nextInt();
-                    if (select1 == 1) {
-                        System.out.println("BJK Selected");
-                        team1=bjk;
-                    } else if (select1 == 2) {
-                        System.out.println("FB Selected");
-                        team1=fb;
+                        case 2:
+                            Team team1 = null;
+                            Team team2 = null;
+                            System.out.println("Multiplayer game is starting...");
+                            System.out.println("Player 1 Select Team ");
+                            teamSelection();
+
+                            int select1 = scannerInt.nextInt();
+                            if (select1 == 1) {
+                                System.out.println("BJK Selected");
+                                team1 = bjk;
+                            } else if (select1 == 2) {
+                                System.out.println("FB Selected");
+                                team1 = fb;
+                            } else {
+                                System.out.println("Wrong team");
+                            }
+
+                            System.out.println("Player 2 Select Team ");
+                            teamSelection();
+                            int select2 = scannerInt.nextInt();
+                            if (select2 == 1) {
+                                System.out.println("BJK Selected");
+                                team2 = bjk;
+                            } else if (select2 == 2) {
+                                System.out.println("FB Selected");
+                                team2 = fb;
+                            } else {
+                                System.out.println("Wrong team");
+                            }
+
+                            if (team1.getTeamName().equals("Besiktas")) {
+                                team1.transferTurkishPlayer(bjkTurksList, team1);
+                                team2.transferTurkishPlayer(fbTurksList, team2);
+                            } else if (team1.getTeamName().equals("Fenerbahce")) {
+                                team1.transferTurkishPlayer(fbTurksList, team1);
+                                team2.transferTurkishPlayer(bjkTurksList, team2);
+                            }
+                            System.out.println("\nTurkish Players has been chosen");
+
+                            System.out.println("Select from club players");
+                            System.out.println("Team1 Starts");
+
+                            if (team1.getTeamName().equals("Besiktas")) {
+                                team1.transferPlayerFromGivenList(bjkForeignPlayers, team1);
+                                team2.transferPlayerFromGivenList(fbForeignPlayers, team2);
+                            } else if (team1.getTeamName().equals("Fenerbahce")) {
+                                team1.transferPlayerFromGivenList(fbForeignPlayers, team1);
+                                team2.transferPlayerFromGivenList(bjkForeignPlayers, team2);
+                            }
+
+                            System.out.println("BITTTII");
+                            break;
+                        case 3:
+                            System.out.println("Hope to see you again soon");
+                            System.exit(0);
                     }
-                    else {
-                        System.out.println("Wrong team");
-                    }
 
-                    System.out.println("Player 2 Select Team ");
-                    teamSelection();
-                    int select2 = scannerInt.nextInt();
-                    if (select2 == 1) {
-                        System.out.println("BJK Selected");
-                        team2=bjk;
-                    } else if (select2 == 2) {
-                        System.out.println("FB Selected");
-                        team2=fb;
-                    }
-                    else {
-                        System.out.println("Wrong team");
-                    }
+                }catch (InputMismatchException e) {
+                    System.out.println("Please Enter a Proper Input");
 
-                    if (team1.getTeamName().equals("Besiktas")) {
-                        team1.transferTurkishPlayer(bjkTurksList,team1);
-                        team2.transferTurkishPlayer(fbTurksList,team2);
-                    }
-                    else if (team1.getTeamName().equals("Fenerbahce")) {
-                        team1.transferTurkishPlayer(fbTurksList,team1);
-                        team2.transferTurkishPlayer(bjkTurksList,team2);
-                    }
+                }
 
 
-                    break;
-                case 3:
-                    System.out.println("Hope to see you again soon");
-                    System.exit(0);
             }
-        }
+
     }
 
 
