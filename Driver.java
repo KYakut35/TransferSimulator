@@ -96,43 +96,51 @@ public class Driver {
 
         //  CDM
 
-        Footballer f39 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f40 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f41 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f42 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
+        Footballer f39 = new Footballer("CASEMIRO", 31, "BRAZIL", "CDM", "I", 40, 15);
+        Footballer f40 = new Footballer("ZAKARIA", 26, "SWITZERLAND", "CDM", "S", 20, 5);
+        Footballer f41 = new Footballer("AL-MUSRATI", 27, "LIBYA", "CDM", "A", 15, 4);
+        Footballer f42 = new Footballer("LEMINA", 29, "GABON", "CDM", "B", 10, 3);
+        Footballer f43 = new Footballer("BENNASSER", 27, "MOROCCO", "CDM", "C", 1, 1);
 
         //  CM
 
-        Footballer f43 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f44 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f45 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f46 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
+        Footballer f44 = new Footballer("BARELLA" ,26,"ITALIAN","CM","I",60 ,10);
+        Footballer f45 = new Footballer("NDOMBELE" ,26,"FRENCH","CM","S",0 ,7);
+        Footballer f46 = new Footballer("MAJER" ,26,"CROATIAN","CM","A",0 ,7);
+        Footballer f47 = new Footballer("BARELLA" ,26,"ITALIAN","CM","B",0 ,7);
+        Footballer f48 = new Footballer("LUSAMBA" ,26,"CONGO","CM","C",0 ,7);
+
 
         //  CAM
 
-        Footballer f47 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f48 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f49 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f50 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
+        Footballer f49 = new Footballer("BARELLA" ,26,"ITALIAN","CAM","I",60 ,10);
+        Footballer f50 = new Footballer("NDOMBELE" ,26,"FRENCH","CAM","S",0 ,7);
+        Footballer f51 = new Footballer("MAJER" ,26,"CROATIAN","CAM","A",0 ,7);
+        Footballer f52 = new Footballer("BARELLA" ,26,"ITALIAN","CAM","B",0 ,7);
+        Footballer f53 = new Footballer("PELKAS" ,26,"CONGO","CAM","C",0 ,7);
 
         //  LW
 
-        Footballer f51 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f52 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f53 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f54 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
+        Footballer f54 = new Footballer("BARELLA" ,26,"ITALIAN","LW","I",60 ,10);
+        Footballer f55 = new Footballer("NDOMBELE" ,26,"FRENCH","LW","S",0 ,7);
+        Footballer f56 = new Footballer("MAJER" ,26,"CROATIAN","LW","A",0 ,7);
+        Footballer f57 = new Footballer("BARELLA" ,26,"ITALIAN","LW","B",0 ,7);
+        Footballer f58 = new Footballer("NANI" ,36,"PORTUGUESE","LW","C",0 ,7);
 
         //  RW
-        Footballer f55 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f56 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f57 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f58 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
+        Footballer f59 = new Footballer("BARELLA" ,26,"ITALIAN","RW","I",60 ,10);
+        Footballer f60 = new Footballer("NDOMBELE" ,26,"FRENCH","RW","S",0 ,7);
+        Footballer f61 = new Footballer("MAJER" ,26,"CROATIAN","RW","A",0 ,7);
+        Footballer f62 = new Footballer("BARELLA" ,26,"ITALIAN","RW","B",0 ,7);
+        Footballer f63 = new Footballer("ZINEDINE FERHAT" ,26,"CONGO","RW","C",0 ,7);
 
         //  ST
-        Footballer f59 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f60 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f61 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f62 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
+        Footballer f64 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
+        Footballer f65 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
+        Footballer f66 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
+        Footballer f67 = new Footballer("OKAKA" ,21,"TURK","CB","S",0 ,7);
+        Footballer f68 = new Footballer("OKAKA" ,21,"TURK","CB","S",0 ,7);
+
 
         System.out.println(bjkList.size());
 
