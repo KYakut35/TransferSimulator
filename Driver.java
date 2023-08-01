@@ -120,42 +120,63 @@ public class Driver {
         Footballer f44 = new Footballer("BARELLA" ,26,"ITALIAN","CM","I",60 ,10);
         Footballer f45 = new Footballer("NDOMBELE" ,26,"FRENCH","CM","S",0 ,7);
         Footballer f46 = new Footballer("MAJER" ,26,"CROATIAN","CM","A",0 ,7);
-        Footballer f47 = new Footballer("BARELLA" ,26,"ITALIAN","CM","B",0 ,7);
+        Footballer f47 = new Footballer("MAL1" ,26,"TURKISH","CM","B",0 ,7);
         Footballer f48 = new Footballer("LUSAMBA" ,26,"CONGO","CM","C",0 ,7);
 
 
         //  CAM
 
-        Footballer f49 = new Footballer("BARELLA" ,26,"ITALIAN","CAM","I",60 ,10);
-        Footballer f50 = new Footballer("NDOMBELE" ,26,"FRENCH","CAM","S",0 ,7);
-        Footballer f51 = new Footballer("MAJER" ,26,"CROATIAN","CAM","A",0 ,7);
-        Footballer f52 = new Footballer("BARELLA" ,26,"ITALIAN","CAM","B",0 ,7);
-        Footballer f53 = new Footballer("PELKAS" ,26,"CONGO","CAM","C",0 ,7);
+        Footballer f49 = new Footballer("MAL2" ,26,"ITALIAN","CAM","I",60 ,10);
+        Footballer f50 = new Footballer("MAL3" ,26,"FRENCH","CAM","S",0 ,7);
+        Footballer f51 = new Footballer("MAL4" ,26,"CROATIAN","CAM","A",0 ,7);
+        Footballer f52 = new Footballer("MAL5" ,26,"ITALIAN","CAM","B",0 ,7);
+        Footballer f53 = new Footballer("PELKAS" ,26,"GREEK","CAM","C",0 ,7);
 
         //  LW
 
-        Footballer f54 = new Footballer("BARELLA" ,26,"ITALIAN","LW","I",60 ,10);
-        Footballer f55 = new Footballer("NDOMBELE" ,26,"FRENCH","LW","S",0 ,7);
-        Footballer f56 = new Footballer("MAJER" ,26,"CROATIAN","LW","A",0 ,7);
-        Footballer f57 = new Footballer("BARELLA" ,26,"ITALIAN","LW","B",0 ,7);
+        Footballer f54 = new Footballer("MAL6" ,26,"ITALIAN","LW","I",60 ,10);
+        Footballer f55 = new Footballer("MAL7" ,26,"FRENCH","LW","S",0 ,7);
+        Footballer f56 = new Footballer("MAL8" ,26,"CROATIAN","LW","A",0 ,7);
+        Footballer f57 = new Footballer("MAL9" ,26,"ITALIAN","LW","B",0 ,7);
         Footballer f58 = new Footballer("NANI" ,36,"PORTUGUESE","LW","C",0 ,7);
 
         //  RW
-        Footballer f59 = new Footballer("BARELLA" ,26,"ITALIAN","RW","I",60 ,10);
-        Footballer f60 = new Footballer("NDOMBELE" ,26,"FRENCH","RW","S",0 ,7);
-        Footballer f61 = new Footballer("MAJER" ,26,"CROATIAN","RW","A",0 ,7);
-        Footballer f62 = new Footballer("BARELLA" ,26,"ITALIAN","RW","B",0 ,7);
-        Footballer f63 = new Footballer("ZINEDINE FERHAT" ,26,"CONGO","RW","C",0 ,7);
+        Footballer f59 = new Footballer("MAL10" ,26,"ITALIAN","RW","I",60 ,10);
+        Footballer f60 = new Footballer("MAL11" ,26,"FRENCH","RW","S",0 ,7);
+        Footballer f61 = new Footballer("MAL12" ,26,"CROATIAN","RW","A",0 ,7);
+        Footballer f62 = new Footballer("MAL13" ,26,"ITALIAN","RW","B",0 ,7);
+        Footballer f63 = new Footballer("ZINEDINE FERHAT" ,26,"ALGERIAN","RW","C",0 ,7);
 
         //  ST
-        Footballer f64 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f65 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f66 = new Footballer("Ramos" ,21,"TURK","CB","S",0 ,7);
-        Footballer f67 = new Footballer("OKAKA" ,21,"TURK","CB","S",0 ,7);
-        Footballer f68 = new Footballer("OKAKA" ,21,"TURK","CB","S",0 ,7);
+        Footballer f64 = new Footballer("MAL14" ,21,"TURK","ST","I",0 ,7);
+        Footballer f65 = new Footballer("MAL15" ,21,"TURK","ST","S",0 ,7);
+        Footballer f66 = new Footballer("MAL16" ,21,"TURK","ST","A",0 ,7);
+        Footballer f67 = new Footballer("MAL17" ,21,"TURK","ST","B",0 ,7);
+        Footballer f68 = new Footballer("OKAKA" ,21,"ITALIAN","ST","C",0 ,7);
+
+        ArrayList<Footballer> globalPlayers = new ArrayList<>();
+        globalPlayers.add(f23);
+        globalPlayers.add(f24);
+        globalPlayers.add(f35);
+        globalPlayers.add(f36);
+        globalPlayers.add(f62);
+        globalPlayers.add(f63);
+        globalPlayers.add(f67);
+        globalPlayers.add(f68);
+        globalPlayers.add(f56);
+        globalPlayers.add(f55);
+        globalPlayers.add(f51);
+        globalPlayers.add(f50);
+        globalPlayers.add(f28);
+        globalPlayers.add(f27);
+        globalPlayers.add(f31);
+        globalPlayers.add(f32);
+        globalPlayers.add(f41);
+        globalPlayers.add(f40);
+        globalPlayers.add(f46);
+        globalPlayers.add(f45);
 
 
-        System.out.println(bjkList.size());
 
         System.out.println("Welcome to Football Simulator 23.4!");
         System.out.println("Please select game mode: ");
@@ -219,15 +240,61 @@ public class Driver {
                             System.out.println("\nTurkish Players has been chosen");
 
                             System.out.println("Select from club players");
-                            System.out.println("Team1 Starts");
+
 
                             if (team1.getTeamName().equals("Besiktas")) {
+                                System.out.println("Team1 Starts");
                                 team1.transferPlayerFromGivenList(bjkForeignPlayers, team1);
+                                System.out.println("Team2 Starts");
                                 team2.transferPlayerFromGivenList(fbForeignPlayers, team2);
                             } else if (team1.getTeamName().equals("Fenerbahce")) {
+                                System.out.println("Team1 Starts");
                                 team1.transferPlayerFromGivenList(fbForeignPlayers, team1);
+                                System.out.println("Team2 Starts");
                                 team2.transferPlayerFromGivenList(bjkForeignPlayers, team2);
                             }
+
+                            System.out.println("Team1 Turn");
+                            String position;
+
+                            while(team1.checkTeamSize(team1) && (team2.checkTeamSize(team2))) {
+                                System.out.println("Team1 Turn");
+                                position ="";
+                                position = selectPosition();
+                                team1.transferPlayerFromGlobalList(globalPlayers,team1,position);
+                                System.out.println("Team2 Turn");
+                                position = "";
+                                position = selectPosition();
+                                team2.transferPlayerFromGlobalList(globalPlayers,team2,position);
+                            }
+
+                            while (!team1.checkTeamSize(team1)) {
+                                position ="";
+                                position = selectPosition();
+                                System.out.println("Team1 Turn");
+                                team1.transferPlayerFromGlobalList(globalPlayers,team1,position);
+                            }
+
+                            while (!team2.checkTeamSize(team2)) {
+                                position ="";
+                                position = selectPosition();
+                                System.out.println("Team2 Turn");
+                                team2.transferPlayerFromGlobalList(globalPlayers,team2,position);
+                            }
+
+
+                           /* if (team1.getTeamName().equals("Besiktas")) {
+                                team1.transferPlayerFromGlobalList(globalPlayers,team1,position);
+                                team2.transferPlayerFromGlobalList(globalPlayers,team2,position);
+                            } else if (team1.getTeamName().equals("Fenerbahce")) {
+                                team1.transferPlayerFromGlobalList(globalPlayers,team1,position);
+                                team2.transferPlayerFromGlobalList(globalPlayers,team2,position);
+                            }*/
+
+
+
+
+
 
                             System.out.println("BITTTII");
                             break;
@@ -252,6 +319,14 @@ public class Driver {
         System.out.println("(1) BJK");
         System.out.println("(2) FB");
         System.out.println("\nType Number: ");
+    }
+
+    public static String selectPosition() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please Enter one of the following positions");
+        System.out.println("\nGK\nCB - RB - LB\nCDM - CM - CAM\nLW - ST - RW");
+        String chosenPosition = scanner.nextLine();
+        return chosenPosition;
     }
 }
 

@@ -66,12 +66,12 @@ public class Team {
     }
 
     public double setTeamAverageAge() {
-        int ageSum=0;
-        double average=0;
-        for (int i=0;i<teamPlayers.size();i++) {
-           ageSum += teamPlayers.get(i).getfAge();
+        int ageSum = 0;
+        double average = 0;
+        for (int i = 0; i < teamPlayers.size(); i++) {
+            ageSum += teamPlayers.get(i).getfAge();
         }
-        average = ageSum/teamPlayers.size();
+        average = ageSum / teamPlayers.size();
         return average;
     }
 
@@ -81,22 +81,21 @@ public class Team {
 
     public void showTeamInfo(Team team) {
         System.out.println("Team Name: " + getTeamName());
-        System.out.println("Team Rating: " +getTeamRating());
-        System.out.println("Team Average Age: " +getTeamAverageAge());
+        System.out.println("Team Rating: " + getTeamRating());
+        System.out.println("Team Average Age: " + getTeamAverageAge());
         System.out.println("\nTeam's Footballers List");
 
-        for (int i=0;i<team.teamPlayers.size();i++) {
+        for (int i = 0; i < team.teamPlayers.size(); i++) {
             Footballer.footballerBio(team.teamPlayers.get(i));
         }
         System.out.println("");
     }
 
 
-
-    public void transferTurkishPlayer(ArrayList<Footballer> openList , Team team) {
+    public void transferTurkishPlayer(ArrayList<Footballer> openList, Team team) {
         System.out.println("");
 
-        for (int i=0; i<openList.size();i++) {
+        for (int i = 0; i < openList.size(); i++) {
             openList.get(i).toString();
             Footballer.footballerBio(openList.get(i));
 
@@ -105,13 +104,13 @@ public class Team {
         System.out.println("");
         System.out.println("Select 3 players from this list");
 
-        for (int i=0; i<3;i++) {
+        for (int i = 0; i < 3; i++) {
             System.out.println("Type player name: ");
             String input = scanStr.nextLine();
-            for (int x=0;x<openList.size();x++) {
+            for (int x = 0; x < openList.size(); x++) {
                 if (input.equals(openList.get(x).getfName())) {
                     team.teamPlayers.add(openList.get(x));
-                    System.out.println(team.teamPlayers.size()+ " Player Selected");
+                    System.out.println(team.teamPlayers.size() + " Player Selected");
                 }
             }
 
@@ -119,6 +118,29 @@ public class Team {
         team.showTeamInfo(team);
 
     }
+
+    public void transferPlayerFromGlobalList(ArrayList<Footballer> globalList, Team team, String position) {
+        for (int i = 0; i < globalList.size(); i++) {
+            if (globalList.get(i).getfPosition().equals(position)) {
+                Footballer.footballerBio(globalList.get(i));
+            }
+        }
+
+        System.out.println("Please Enter the Name of the Player to transfer");
+
+        System.out.println("Type player name: ");
+        String name = scanStr.nextLine();
+        for (int x = 0; x < globalList.size(); x++) {
+            if (name.equals(globalList.get(x).getfName())) {
+                team.teamPlayers.add(globalList.get(x));
+                System.out.println(team.teamPlayers.size() + " Player Selected");
+            }
+        }
+        team.showTeamInfo(team);
+    }
+
+
+
 
     public void transferPlayerFromGivenList(ArrayList<Footballer> givenList , Team team) {
         try {
@@ -157,6 +179,15 @@ public class Team {
             }
         } catch (InputMismatchException e) {
             System.out.println("Give Proper Input");
+        }
+    }
+
+    public boolean checkTeamSize(Team team) {
+        if (team.teamPlayers.size() <= 11) {
+            return true;
+        }
+        else {
+            return false;
         }
     }
 
