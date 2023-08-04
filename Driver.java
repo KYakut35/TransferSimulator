@@ -230,6 +230,9 @@ public class Driver {
                                 System.out.println("Wrong team");
                             }
 
+                            System.out.println("Stage 1: Chose From Turkish Club Players ");
+
+
                             if (team1.getTeamName().equals("Besiktas")) {
                                 team1.transferTurkishPlayer(bjkTurksList, team1);
                                 team2.transferTurkishPlayer(fbTurksList, team2);
@@ -237,9 +240,9 @@ public class Driver {
                                 team1.transferTurkishPlayer(fbTurksList, team1);
                                 team2.transferTurkishPlayer(bjkTurksList, team2);
                             }
-                            System.out.println("\nTurkish Players has been chosen");
+                            System.out.println("\nStage 1 completed . . . ");
 
-                            System.out.println("Select from club players");
+                            System.out.println("Stage 2: Chose From Foreign Club Players ");
 
 
                             if (team1.getTeamName().equals("Besiktas")) {
@@ -254,48 +257,37 @@ public class Driver {
                                 team2.transferPlayerFromGivenList(bjkForeignPlayers, team2);
                             }
 
-                            System.out.println("Team1 Turn");
+                            System.out.println("\nStage 2 completed . . . ");
+
+
+                            System.out.println("\nStage 3: Global Player Selection");
+
+
+                            boolean flag = true;
+                            int team1Counter = team1.getTeamPlayers().size();
+                            int team2Counter = team2.getTeamPlayers().size();
+
                             String position;
+                            while(flag) {
 
-                            while(team1.checkTeamSize(team1) && (team2.checkTeamSize(team2))) {
-                                System.out.println("Team1 Turn");
-                                position ="";
-                                position = selectPosition();
-                                team1.transferPlayerFromGlobalList(globalPlayers,team1,position);
-                                System.out.println("Team2 Turn");
-                                position = "";
-                                position = selectPosition();
-                                team2.transferPlayerFromGlobalList(globalPlayers,team2,position);
+                                if (team1Counter<11) {
+                                    System.out.println("Team1 Turn");
+                                    position = selectPosition();
+                                    team1.transferPlayerFromGlobalList(globalPlayers, team1, position);
+                                    team1Counter = team1.getTeamPlayers().size();
+                                }
+
+                                if (team2Counter<11) {
+                                    System.out.println("Team2 Turn");
+                                    position = selectPosition();
+                                    team2.transferPlayerFromGlobalList(globalPlayers, team2, position);
+                                    team2Counter = team2.getTeamPlayers().size();
+                                }
+
+                                if (team1Counter == 11 && team2Counter == 11) {
+                                    flag = false;
+                                }
                             }
-
-                            while (!team1.checkTeamSize(team1)) {
-                                position ="";
-                                position = selectPosition();
-                                System.out.println("Team1 Turn");
-                                team1.transferPlayerFromGlobalList(globalPlayers,team1,position);
-                            }
-
-                            while (!team2.checkTeamSize(team2)) {
-                                position ="";
-                                position = selectPosition();
-                                System.out.println("Team2 Turn");
-                                team2.transferPlayerFromGlobalList(globalPlayers,team2,position);
-                            }
-
-
-                           /* if (team1.getTeamName().equals("Besiktas")) {
-                                team1.transferPlayerFromGlobalList(globalPlayers,team1,position);
-                                team2.transferPlayerFromGlobalList(globalPlayers,team2,position);
-                            } else if (team1.getTeamName().equals("Fenerbahce")) {
-                                team1.transferPlayerFromGlobalList(globalPlayers,team1,position);
-                                team2.transferPlayerFromGlobalList(globalPlayers,team2,position);
-                            }*/
-
-
-
-
-
-
                             System.out.println("BITTTII");
                             break;
                         case 3:
@@ -313,8 +305,6 @@ public class Driver {
 
     }
 
-
-
     public static void teamSelection(){
         System.out.println("(1) BJK");
         System.out.println("(2) FB");
@@ -324,7 +314,7 @@ public class Driver {
     public static String selectPosition() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please Enter one of the following positions");
-        System.out.println("\nGK\nCB - RB - LB\nCDM - CM - CAM\nLW - ST - RW");
+        System.out.println("\nGK\nLB - CB - RB\nCDM - CM - CAM\nLW - ST - RW");
         String chosenPosition = scanner.nextLine();
         return chosenPosition;
     }

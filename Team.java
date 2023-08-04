@@ -88,7 +88,8 @@ public class Team {
         for (int i = 0; i < team.teamPlayers.size(); i++) {
             Footballer.footballerBio(team.teamPlayers.get(i));
         }
-        System.out.println("");
+
+        System.out.println(getTeamName() + " have " + getTeamPlayers().size() + " players\n");
     }
 
 
