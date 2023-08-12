@@ -37,7 +37,7 @@ public class Driver {
         fbTurksList.add(f7);
         //  BJK TURKS
 
-        Footballer f8 = new Footballer("MERT G" ,21,"TURKISH","GK","A",0 ,0);
+        Footballer f8 = new Footballer("MERT" ,21,"TURKISH","GK","A",0 ,0);
         Footballer f9 = new Footballer("CENK" ,21,"TURKISH","ST","A",0 ,0);
         Footballer f10 = new Footballer("SALIH" ,21,"TURKISH","CM","B",0 ,0);
         Footballer f11 = new Footballer("ONUR" ,21,"TURKISH","RB","B",0 ,0);
@@ -189,7 +189,6 @@ public class Driver {
                 Scanner scannerInt = new Scanner(System.in);
                 Scanner scannerStr = new Scanner(System.in);
 
-
                 try {
                     int choice;
                     choice = scannerInt.nextInt();
@@ -262,7 +261,7 @@ public class Driver {
 
                             System.out.println("\nStage 3: Global Player Selection");
 
-
+// SECILEN POZISYONDA OYUNCU KALMADIYSA YENI POZISYON SECTIR
                             boolean flag = true;
                             int team1Counter = team1.getTeamPlayers().size();
                             int team2Counter = team2.getTeamPlayers().size();

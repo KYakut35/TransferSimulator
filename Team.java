@@ -112,7 +112,7 @@ public class Team {
                 if (input.equals(openList.get(x).getfName())) {
                     team.teamPlayers.add(openList.get(x));
                     System.out.println(team.teamPlayers.size() + " Player Selected");
-                    team.teamPlayers.add(openList.remove(x));
+                    openList.remove(i);
                 }
             }
 
@@ -136,7 +136,7 @@ public class Team {
             if (name.equals(globalList.get(x).getfName())) {
                 team.teamPlayers.add(globalList.get(x));
                 System.out.println(team.teamPlayers.size() + " Player Selected");
-                team.teamPlayers.remove(globalList.get(x));
+                globalList.remove(x);
             }
         }
         team.showTeamInfo(team);
@@ -173,7 +173,7 @@ public class Team {
                             if (name.equals(givenList.get(x).getfName())) {
                                 team.teamPlayers.add(givenList.get(x));
                                 System.out.println(team.teamPlayers.size() + " Player Selected");
-                                team.teamPlayers.remove(givenList.get(x));
+                                givenList.remove(i);
                             }
                         }
                     }
